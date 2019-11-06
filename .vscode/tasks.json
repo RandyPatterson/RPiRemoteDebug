@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/rpiworker.csproj"
+                "${workspaceFolder}/${workspaceFolderBasename}.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -26,6 +26,12 @@
                 "command": "${cwd}\\publish.bat"
             },
             "problemMatcher": []
+        },
+        {
+            
+                "label": "echo",
+                "type": "shell",
+                "command": "echo ${workspaceFolderBasename}"
         }
     ]
 }

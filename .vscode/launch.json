@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "publish",
-            "program": "/home/pi/worker/rpiworker",
+            "program": "/home/pi/worker/${workspaceFolderBasename}",
             "args": [],
             "cwd": "/home/pi/worker",
             "stopAtEntry": false,
