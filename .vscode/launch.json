@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (RPi)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "publish",
+            "program": "/home/pi/worker/rpiworker",
+            "args": [],
+            "cwd": "/home/pi/worker",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceFolder}",
+                "pipeProgram": "PLINK.EXE",
+                "pipeArgs": [
+                    "-batch",
+                    "-pw",
+                    "raspberry",
+                    "root@192.168.10.96"
+                ],
+                "debuggerPath": "/home/pi/vsdbg/vsdbg"
+            }
+        }
+    ]
+}
