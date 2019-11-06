@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Device.Gpio;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +20,7 @@ namespace rpiworker
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
+                    services.AddSingleton(typeof(GpioController), new GpioController());
                 });
     }
 }

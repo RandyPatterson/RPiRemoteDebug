@@ -8,6 +8,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 //GPIO https://darenmay.com/blog/net-core-and-gpio-on-the-raspberry-pi---leds-and-gpio/
+//dotnet add package System.Device.Gpio 
+//dotnet add package Iot.Device.Bindings
 
 namespace rpiworker
 {
@@ -16,12 +18,13 @@ namespace rpiworker
         private readonly ILogger<Worker> _logger;
         //GPIO 18 is physical pin 12
         private const int ledPin = 18;
-        GpioController controller = new GpioController();
+        GpioController controller;
 
 
-        public Worker(ILogger<Worker> logger)
+        public Worker(ILogger<Worker> logger, GpioController controller)
         {
             _logger = logger;
+            this.controller = controller;
         }
 
 

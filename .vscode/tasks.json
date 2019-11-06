@@ -14,7 +14,7 @@
         {
             "label": "publish",
             "type": "shell",
-            "dependsOn": "build",
+            //"dependsOn": "build",
             "presentation": {
                 "reveal": "always",
                 "panel": "new"
