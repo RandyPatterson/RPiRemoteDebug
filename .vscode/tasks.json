@@ -9,12 +9,15 @@
                 "build",
                 "${workspaceFolder}/${workspaceFolderBasename}.csproj"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "deploy",
             "type": "shell",
-            //"dependsOn": "build",
             "presentation": {
                 "reveal": "always",
                 "panel": "new"
@@ -28,10 +31,9 @@
             "problemMatcher": []
         },
         {
-            
-                "label": "echo",
-                "type": "shell",
-                "command": "echo ${env:remoteDir}"
+            "label": "echo",
+            "type": "shell",
+            "command": "echo ${env:remoteDir}"
         }
     ]
 }

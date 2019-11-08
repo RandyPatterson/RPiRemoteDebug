@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <UserSecretsId>dotnet-rpiworker-8EC2A5FC-453B-4DF6-8E7E-D290D74D4F51</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Iot.Device.Bindings" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.0-preview1.19506.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
     <PackageReference Include="System.Device.Gpio" Version="1.0.0" />
   </ItemGroup>
 </Project>
