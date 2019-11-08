@@ -20,7 +20,7 @@
             "type": "shell",
             "presentation": {
                 "reveal": "always",
-                "panel": "new"
+                "panel": "dedicated"
             },
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -31,9 +31,37 @@
             "problemMatcher": []
         },
         {
-            "label": "echo",
+            "label": "linux-arm",
+            "command": "dotnet",
             "type": "shell",
-            "command": "echo ${env:remoteDir}"
-        }
+            "windows": {
+                "command": "dotnet publish -r linux-arm"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Docker",
+            "command": "docker",
+            "type": "shell",
+            "windows": {
+                "command": "docker build -t ${workspaceFolderBasename} ."
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": "linux-arm"
+        },
     ]
 }

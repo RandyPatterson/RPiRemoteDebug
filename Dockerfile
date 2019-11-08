@@ -2,6 +2,6 @@
 
 FROM  mcr.microsoft.com/dotnet/core/runtime:3.0.0-buster-slim-arm32v7
 WORKDIR /app
-COPY ./bin/Debug/netcoreapp3.0/linux-arm .
+COPY ./bin/Debug/netcoreapp3.0/linux-arm/publish .
 RUN chmod 777 ./rpiworker
 ENTRYPOINT [ "./rpiworker" ]
