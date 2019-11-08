@@ -12,7 +12,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish",
+            "label": "deploy",
             "type": "shell",
             //"dependsOn": "build",
             "presentation": {
@@ -23,7 +23,7 @@
                 "cwd": "${workspaceFolder}"
             },
             "windows": {
-                "command": "${cwd}\\publish.bat"
+                "command": "${cwd}\\deploy.bat"
             },
             "problemMatcher": []
         },
@@ -31,7 +31,7 @@
             
                 "label": "echo",
                 "type": "shell",
-                "command": "echo ${workspaceFolderBasename}"
+                "command": "echo ${env:remoteDir}"
         }
     ]
 }

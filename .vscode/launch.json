@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (RPi)",
+            "name": "Remote RPi",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "publish",
+            "preLaunchTask": "deploy",
             "program": "/home/pi/worker/${workspaceFolderBasename}",
             "args": [],
             "cwd": "/home/pi/worker",
