@@ -1,0 +1,1 @@
+Reference Setup to develop .NET Core 3 for Raspberry Pi locally then deploy and debug on a Device
